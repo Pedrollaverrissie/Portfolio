@@ -9,18 +9,20 @@
     body
     {
         background-image: url(hacker1jpg);
+        color: antiquewhite;
+        
     }
+
     .main{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         margin: auto;
         margin-top: 30PX;
         text-align: center;
     
         column-gap:40px;
-       
         justify-content:center;
         align-items:center;
         text-align:center;
@@ -49,9 +51,10 @@
     
     }
     .info{
-        color: black;
+        
+        color:black;
         text-align:left;
-    
+       
 
     
         
@@ -63,7 +66,7 @@
         font-size: 25px;
     }
     button{
-        background-color: black;
+        
         color: white;
         width: 50%;
         padding: 5px;
@@ -79,69 +82,201 @@
         color:green;
         transition:0.4s;
     }
-  
-
-    }
-    img{
-        
-    }
+    
     .icons{
         display: flex;
         flex-direction: row;
-        justify-content:center;
-        text-align: center;
-        align-items:center;
-        width:30%;  
-
+     
+        text-align: left;
+        justify-content: left;
+        margin-left: 50px;
         
-        margin-top:7%;
+        margin-top:4%;
+        margin-bottom:4%;
         
            
     }
-    .img2{
-        border-radius: 35px;
+    .img1{
+        border-radius: 50px;
         cursor: pointer;
-        width:60%;
+        width:100%;
     }
+    .img2{
+        border-radius: 50px;
+        cursor: pointer;
+        width:100%;
+        margin-left:45px;
+    }
+
     .img3{
-        width:36%;
-        margin-left:8px;
-        margin-right:8px;
+        width:100%;
+       
+        margin-left:20px;
+       
+        border-radius: 80px;
     }
-    .about
-    {
-     margin-left: 20px;
-     margin-right: 20px;   
-    } 
-   . text{
+  
+   .text{
        display:flex;
        flex-direction:row;
-        justify-content:space-between;
-       text-align:center;
-       align-items:center;
-       margin-top:40%;
+       position: absolute;
+        
+       text-align:left;
+       margin-left: 2%;
+     
+       margin-top:20%;
        
    }
-    .icons: last-child{
-        flex-wrap:wrap;
-        margin-top:40%;
+   
+    h1{
+        font-size:30px;
         
-    }
-    h{
-        font-size:20px;
     }  
     .anchor{
         margin-left: 16px;
      margin-right: 16px;  
     }
+    .images{
+        position: absolute;
+        top: 20%;
+        left: 60%;    
+        display: flex;
+        
+    }
+    .books{
+        width: 60%;
+        border-radius: 50%;
+        stroke-width: 20px;
+        
+        stroke: chartreuse;
+
+    }
+    .divimg{
+        width: 4%;
+    }
+    .background{
+        position: absolute;
+        z-index: -6;
+        width: 100%;
+    }
+    .backimg{
+        width: 100%;
+        height: 100vh;
+    }
+    .page{
+        display: flex;
+        width: 100vw;
+        background-color: azure;
+        justify-content: left;
+        text-align: left;
+        height: 100vh;
+        visibility: hidden;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50% -50%) scale(0.1);
+    }
+  .homepage{
+    background-image: url(elctribk2.jpeg);
+            background-position: 50% 0px;
+            min-height: 100vh !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+    
+  }
+  .login{
+    background-color: rgb(91, 228, 228);
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: black;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    left:30%;
+    right: 30%;
+    top: 40%;
+    margin: auto;
     
     
-  
+  }
+  .btn1{
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    background-color: black;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    margin: auto;
+    left: 20%;
+    right:20%;
+    bottom: 10px;
+  }
+  input{
+    height: 25px;
+    border-radius: 4px;
+    outline: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .open-page{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(100%);
+  }
+  .pix{
+    color: chartreuse;
+    margin-left: 10px;
+  }
+  .close-login{
+    visibility: hidden;
+  }
+  .btn2{
+    background-color: transparents;
+    width: 8px;
+    height: 20px;
+    font-size: 10px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+
+    right:13px;  
+    outline: 0; 
+    border: 0;
+    bottom: 53px;
+  }
+  .hire{
+    background-color: black;
+  }
 </style>
-<body style="background-color: rgb(157, 255, 0);">
+<body >
+    
+    <div class="homepage">
+        <div class="login" id="login">
+        <label for="">Username</label>
+        <input id="username" type="text">
+        <label for="">Password</label>
+        <input id="password" type="password">
+        <button id="show1" class="btn2">&#128222</button><br>
+        <button onclick="login(), closelogin()" class="btn1">Login</button>
+    </div>
+    </div>
+    
+<div class="page" id="page">
     <div class="main">
         <div class="left">           
-           <h1>Pixels</h1> 
+           <h1 class="pix">Pixels</h1> 
         </div>
         <div class="right">
             <a href="https://pixels-1.github.io/Pixweb1/" >HISTORY</a>
@@ -158,19 +293,70 @@
         <h1><SPAn>W</SPAn>EB <SPAn>D</SPAn>EVELOPER <br> <SPAn>&</SPAn> <SPAn>D</SPAn>ESIGNER</h1>
         <p>Web designer and Frontend developer from Nairobi,Kenya.
         </p>
-        <button Id="hire" >Hire me</button>
-    </div>
+        <button class="hire" Id="hire"  >Hire me</button>
+        
 
     <div class="icons">
-        <a href="https://www.facebook.com/Petrofellorrissie.Karl" target="_blank"><img class="img2" src="Facebook.png" ></a>
-        <a class="about" href="https://twitter.com/Pixels" target="_blank"><img class="img3" src="twitter.png" ></a> 
-        <a href="https://support.skype.com/Petrokarl?/chat" target="_blank"><img class="img2" src="Skype.jpg" ></a>  
-       </div>
+       <div class="divimg"><a href="https://www.facebook.com/Petrofellorrissie.Karl" target="_blank"><img class="img1" src="Facebook.png" ></a></div> 
+       <div class="divimg"><a  href="https://twitter.com/Pixels" target="_blank"><img class="img3" src="twitter.jpg" ></a> </div>
+        <div class="divimg"> <a href="https://support.skype.com/Petrokarl?/chat" target="_blank"><img class="img2" src="Skype.jpg" ></a>  </div>
+       
+    </div>
  </div>
-        <script>
+ 
+    
+ </div>
+</div>
+        <script> 
+
             document.getElementById("hire").onclick= function(){
                window.alert("Reach me out on WhatsApp in my About.Thank you!!!") 
             }
+
+        </script>
+        <script>
+            let page=document.getElementById("page");
+            const username=document.getElementById("username");
+            const password=document.getElementById("password");
+            
+            function login(){
+                let pass=password.value;
+                let name=username.value;
+                
+                    if(name=="Pixels" && pass=="!@#254"){
+                        page.classList.add("open-page");
+                    }
+                    else if(name=="")
+                    {
+                        window.alert("You must fill in authorised username to continue!!");
+                    }
+                    else if(pass=="")
+                    {
+                        window.alert("You must enter authorised password!!");
+                    }  
+                     
+                    else{
+                        window.alert("Invalid credentials");
+                    }
+                  }
+
+        const show1=document.getElemesntById("show1");
+        
+        show1.addEventListener("click",event=>{
+        if( 
+            pass.style.display==="none"
+
+        ){
+            pass.style.display="block";
+        }
+         p
+         
+        })
+
+
+        </script>
+        <script>
+           
         </script>
 </body>
 </html>
