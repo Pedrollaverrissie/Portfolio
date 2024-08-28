@@ -177,7 +177,7 @@
         transform: translate(-50% -50%) scale(0.1);
     }
   .homepage{
-    background-image: url(pix.jpg);
+    background-image: url(Pix.jpg);
             background-position: 50% 0px;
             min-height: 100vh !important;
             background-repeat: no-repeat;
@@ -187,10 +187,10 @@
     
   }
   .login{
-    background-color: rgb(91, 228, 228);
+    background-color: rgba(15, 187, 199, 0.164);
     border-radius: 6px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 40px;
     justify-content: center;
     text-align: center;
     box-shadow: black;
@@ -207,10 +207,7 @@
     
   }
   .btn1{
-    height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
+    height: 35px;
     background-color: black;
     text-align: center;
     align-self: center;
@@ -218,7 +215,9 @@
     margin: auto;
     left: 20%;
     right:20%;
-    bottom: 10px;
+    bottom: 20px;
+    font-size: 20px;
+    align-items: center;
   }
   input{
     height: 25px;
@@ -240,17 +239,17 @@
     visibility: hidden;
   }
   .btn2{
-    background-color: transparents;
+    background-color: white;
     width: 8px;
     height: 20px;
-    font-size: 10px;
+    font-size: 20px;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: row;
     position: absolute;
     align-items: center;
-
+   color:black;
     right:13px;  
     outline: 0; 
     border: 0;
@@ -259,17 +258,57 @@
   .hire{
     background-color: black;
   }
+  .imgs{
+    width: 30px;
+    position: absolute;
+    bottom: 81px;
+    right: 18px;
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    color: rgb(245, 255, 240);
+  }
+  .in1{
+    color: antiquewhite;
+    font-weight: bold;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgba(231, 231, 229, 0.212);
+    border-color: greenyellow;
+    border-radius: 8px;
+    outline: 0;
+  }
+  .in2{
+    color: antiquewhite;
+    height: 35px;
+    font-size: 20px;
+    border-color: greenyellow;
+    border-radius: 8px;
+    background-color: rgba(231, 231, 229, 0.212);
+  }
+  .lb1,.lb2{
+    font-size: 30px;
+  }
+  .profile{
+    height: 100px;
+    width: 80px;
+    position: absolute;
+    align-self: center;
+    margin: auto;
+    top: -15%;
+    border-radius: 50%;
+  }
 </style>
 <body >
     
     <div class="homepage">
         <div class="login" id="login">
-        <label for="">Username</label>
-        <input id="username" type="text">
-        <label for="">Password</label>
-        <input id="password" type="password">
-        <button id="show1" class="btn2">&#128222</button><br>
-        <button onclick="login(), closelogin()" class="btn1">Login</button>
+            <img class="profile" src="hacker4.jpg" alt="">
+        <label class="lb1" for="">Username</label>
+        <input class="in1" id="username" type="text"><br>
+        <label class="lb2" for="">Password</label>
+        <input class="in2" id="password" type="password"><br>
+        <img class="imgs" id="eyeicon" src="hide eye icon.png" onclick="showpassword()"><br>
+        <button onclick="login()" class="btn1">Login</button>
     </div>
     </div>
     
@@ -296,7 +335,12 @@
         <button class="hire" Id="hire"  >Hire me</button>
         
 
-   
+    <div class="icons">
+       <div class="divimg"><a href="https://www.facebook.com/Petrofellorrissie.Karl" target="_blank"><img class="img1" src="Facebook.png" ></a></div> 
+       <div class="divimg"><a  href="https://twitter.com/Pixels" target="_blank"><img class="img3" src="twitter.jpg" ></a> </div>
+        <div class="divimg"> <a href="https://support.skype.com/Petrokarl?/chat" target="_blank"><img class="img2" src="Skype.jpg" ></a>  </div>
+       
+    </div>
  </div>
  
     
@@ -334,23 +378,29 @@
                         window.alert("Invalid credentials");
                     }
                   }
-
-        const show1=document.getElemesntById("show1");
+    const eyeicon=document.getElementById("eyeicon");
+    function showpassword(){
         
-        show1.addEventListener("click",event=>{
-        if( 
-            pass.style.display==="none"
-
-        ){
-            pass.style.display="block";
-        }
-         p
+    if(password.type=="password"){
+        password.type="text";     
+        eyeicon.src="show eye icon.jpg"
          
-        })
 
+    }
+    else{
+        password.type="password";
+        eyeicon.src="hide eye icon.png"
+    }
+ }
+      
 
         </script>
         <script>
+ //let showpassword=document.getElementById("showpassword");
+ //let passa=document.getElementById("passa");
+ 
+
+
            
         </script>
 </body>
